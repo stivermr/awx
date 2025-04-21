@@ -2,10 +2,8 @@
   hosts: k3s-nodes
 
   tasks:
-
-      # it is possible to save the result of any command in a named register.  This variable will be made
-      # available to tasks and templates made further down in the execution flow.
-
       - shell: "ip a"
         ignore_errors: yes
-        register: uname_result
+        register: ip
+        
+      - debug: msg="{{ hello.stdout }}"
