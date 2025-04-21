@@ -6,4 +6,4 @@
         ignore_errors: yes
         register: ip
         
-      - debug: msg="{{ hello.stdout }}"
+      - debug: msg="{{ ip.stdout }}"
